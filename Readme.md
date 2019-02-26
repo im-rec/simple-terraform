@@ -8,15 +8,17 @@ Amazon Resources Creating Using Terraform :
 - Creating AWS VPC NAT Gateway.
 - Associating AWS VPC Subnets with VPC route tables.
 
+Notes :
+1. Edit file ./input/variable.tfvars, replace text with your AWS key.
+```
+  aws_access_key = "XXXXXXXXXXXXXX"
+  aws_secret_key = "XXXXXXXXXXXXXXXXXXXXXXXXXXX"
+```
 
-1. Edit file ./input/variable.tfvars
-aws_access_key = "XXXXXXXXXXXXXX"
-aws_secret_key = "XXXXXXXXXXXXXXXXXXXXXXXXXXX"
+2. terraform init.
 
-2. terraform init
+3. terraform plan -var-file ./input/variable.tfvars.
 
-3. terraform plan -var-file ./input/variable.tfvars
+4. terraform apply -var-file ./input/variable.tfvars.
 
-4. terraform apply -var-file ./input/variable.tfvars
-
-5. Finish
+5. Finish.
